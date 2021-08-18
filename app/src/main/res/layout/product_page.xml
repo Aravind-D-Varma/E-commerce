@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/product_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Product Name"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/product_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_title_text"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:inputType="text"
+        android:padding="5dp"
+        android:background="@drawable/edit_text_border"/>
+
+    <TextView
+        android:id="@+id/product_marketPrice_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_title"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="8dp"
+        android:text="Market Price"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/product_marketPrice"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_marketPrice_text"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:inputType="numberDecimal"
+        android:padding="5dp"
+        android:drawableStart="@drawable/rupee"
+        android:drawableTint="@color/white"
+        android:background="@drawable/edit_text_border"/>
+    <TextView
+        android:id="@+id/product_storePrice_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/product_title"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="8dp"
+
+        android:text="Store Price"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/product_storePrice"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@id/product_storePrice_text"
+        android:layout_alignParentEnd="true"
+        android:drawableTint="@color/white"
+        android:inputType="numberDecimal"
+        android:padding="5dp"
+        android:drawableStart="@drawable/rupee"
+        android:background="@drawable/edit_text_border"/>
+
+    <TextView
+        android:id="@+id/product_category_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_marketPrice"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="8dp"
+        android:text="Category"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/product_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@id/product_category_text"
+        android:inputType="textMultiLine"
+        android:maxLines="6"
+        android:padding="5dp"
+        android:background="@drawable/edit_text_border"/>
+
+    <TextView
+        android:id="@+id/product_details_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_category"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="8dp"
+        android:text="Description"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/product_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@id/product_details_text"
+        android:inputType="textMultiLine"
+        android:maxLines="6"
+        android:padding="5dp"
+        android:background="@drawable/edit_text_border"/>
+    <TextView
+        android:id="@+id/product_upload_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_details"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="8dp"
+        android:text="Upload Picture"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <ImageButton
+        android:id="@+id/product_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_upload_text"
+        android:src="@drawable/upload"
+        android:scaleType="centerCrop"
+        android:padding="150dp"
+        android:layout_above="@id/cancelAndSubmit"
+        android:layout_marginBottom="84dp"
+        tools:ignore="ContentDescription"
+        android:background="@drawable/edit_text_border"/>
+    <LinearLayout
+        android:id="@+id/cancelAndSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2">
+        <android.widget.Button
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight = "1"
+            android:text="Cancel"
+            android:background="@drawable/button_border"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:layout_margin="8dp"/>
+        <android.widget.Button
+            android:id="@+id/submit_area"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:backgroundTint="#04B2FF"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
